@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: black;
+    min-height: 100vh;
+    height: 1850px;
+}
+
+#container{ 
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.row{
+    display: inline-flex;
+    margin-top: -32px;
+    margin-left: -50px;
+    
+}
+
+
+.hexagon{
+    position: relative;
+    width: 100px;
+    height: 110px;
+    margin: 1px;
+    transition: 2s;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: linear-gradient(90deg, rgba(18, 17, 19, 1) 50%, rgba(0,0,0,1) 50%);
+    background: black;
+}
+
+.hexagon:hover{
+    transition: 0s;
+}
+
+.row:nth-child(even){
+    margin-left: 1px;
+}
+
+.curser{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    animation: anim 2s linear infinite;
+    visibility: hidden;
+    transition: 0s;
+    transform: translate(-50%, -50%);
+    background: repeat;
+}
+
+@keyframes anim{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+body:hover .curser{
+    background: radial-gradient(circle 170px, rgba(0,255, 0,1) 23% , rgba(0,0,0,.1) 100%);
+    visibility: visible;
+}
+
+.main {
+    display: flex;
+    margin-top: 100px;
+    padding: 10px;
+    margin-left: 0px;
+}
+
+.container{
+    left: 0;
+    top: 0;
+}
+
+.what-is-comsci{
+    position: absolute;
+    color: white;
+    width: 235px;
+    margin-left: 15px;
+    margin-top: 50px;
+    left: 0;
+    top: 0;
+    border: solid white;
+    border: none;
+}
+
+.goal-of-comsci{
+    position: absolute;
+    color: white;
+    width: 230px;
+    margin-left: 516px;
+    margin-top: 50px;
+    left: 0;
+    top: 0;
+    border: solid white;
+    border: none;
+}
+
+.why-comsci{
+    position: absolute;
+    color: white;
+    width: 230px;
+    margin-left: 1020px;
+    margin-top: 50px;
+    left: 0;
+    top: 0;
+    border: solid white;
+    border: none;
+}
+
+.intro{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.list{
+    list-style-type: none;
+}
+
+.spacing{
+    margin: 5px;
+}
+
+#spacing{
+    margin: 20px;
+    padding: 0;
+}
+
+.goal{
+    border: solid white;
+    color: white;
+    padding: 10px;
+    width: 33%;
+    margin-left: 10px;
+}
+
+.what{
+    border: solid white;
+    color: white;
+    padding: 10px;
+    width: 33%;
+}
+
+.why{
+    border: solid white;
+    color: white;
+    padding: 10px;
+    width: 33%;
+    margin-left: 10px;
+}
+
+.what, .goal,.why{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 33%;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-right: 10px;
+    box-shadow: 1px 1px 20px #14EACFFF,
+                1px 1px 40px #14EACFFF;
+    animation: anime 1s linear infinite;           
+
+
+}
+
+.main .what, .goal,.why:nth-child(1){
+    animation-delay: 0.2s;
+}
+.main .what, .goal,.why:nth-child(2){
+    animation-delay: 0.4s;
+}
+
+@keyframes anime {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.career-one{
+    display: flex;
+    width: 50%;
+    border: 1px solid white;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.discription{
+    color: rgb(99, 99, 192);
+}
+
+.weight{
+    color: white;
+}
+
+.career-two {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+
+.web-developer {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid white;
+    margin-right: 20px;
+}
+
+.career-three{
+    display: flex;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid white;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.computer-system-analyst{
+    width: 100%;
+    margin-left: 20px;
+}
+
+.career-four{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+
+.computer-hardware-engineer{
+    width: 50%;
+    padding: 10px;
+    border: 1px solid white;
+    margin-right: 20px;
+}
+
+.career-five{
+    display: flex;
+    width: 50%;
+    border: 1px solid white;
+    padding: 10px;
+    margin-left: 20px;
+}
+.offer{
+    color: white;
+    border: none;
+    width: fit-content; 
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.location{
+    color: white;
+    border: none;
+    width: fit-content;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.about{
+
+    padding-bottom: 10px;
+    margin: 30px;
+    display: flex;
+    width: fit-content;
+}
+
+#about{
+    color: white;
+    border: none;
+    width: fit-content;
+    margin-top: 50px;
+    margin-left: 10px;
+    font-size: larger;
+    font-style: italic;
+    position: flex;
+}
+
+#details{
+    color: white;
+    border: none;
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: 75px;
+}
+
+.details{
+    color: white;
+    border: none;
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+}
+
+.detail{
+    margin-top: 20px;
+    color: white;
+    margin-left: 9px;
+}
+
+#more{
+    font-style: italic;
+    color: rgb(93, 93, 213);
+}
+
+.admission{
+    width: 20%;
+    margin-left: 60px;
+    margin-top: 55px;
+    
+}
+
+.photo{
+    width: 15px;
+    margin-top: 3px;
+    
+}
+
+#photo{
+    width: 15px;
+    height: 35px;
+
+}
+
+.photos{
+    width: 26px;
+    margin-top: 10px;
+}
+.about1{
+    margin-left: 50px;
+}
+.about2{
+    width: 20%;
+    margin-left: 200px;
+}
+
+.about3{
+    margin-left: 190px;
+    margin-top: 30px;
+}
+
+.container3{
+    display: flex;
+    position: absolute  ;
+}
+
+.contact{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.logos{
+    width: 20px;
+    margin-top: 20px;        
+}
+
+#logos{
+    width: 30px;
+    margin-top: 10px;        
+}
